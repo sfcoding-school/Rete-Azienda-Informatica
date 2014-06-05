@@ -1,5 +1,5 @@
 $TTL 86400
-@	IN	SOA	zeus.DMZ.AziendaInformatica.it	admin.AziendaInformatica.it (
+@	IN	SOA	zeus.AziendaInformatica.it	admin.AziendaInformatica.it (
 	2014052002	;Serial
 	36000               	;Refresh
 	3600			;Retry
@@ -8,12 +8,12 @@ $TTL 86400
 )
 
 ; Definizione dei server DNS e mail
-IN    NS    zeus.DMZ.AziendaInformatica.it
-IN    MX    mail.DMZ.BrunelloCucinelli.it
+IN    NS    zeus.AziendaInformatica.it
+IN    MX    mail.BrunelloCucinelli.it
 
 ; Definizione host
-1	IN	PTR	tanato.DMZ.AziendaInformatica.it.		# Interior Router
-2	IN	PTR	ermes.DMZ.AziendaInformatica.it.		# Server Mail
-4	IN	PTR	ade.DMZ.AziendaInformatica.it.		# Server Proxy
-5	IN	PTR	poseidone.DMZ.AziendaInformatica.it.	# Server Web
-6	IN	PTR	crono.DMZ.AziendaInformatica.it.		# Exterior Router
+1	IN	PTR	tanato.AziendaInformatica.it.		# Interior Router
+2	IN	PTR	ermes.AziendaInformatica.it.		# Server Mail
+4	IN	PTR	ade.AziendaInformatica.it.		# Server Proxy
+5	IN	PTR	poseidone.AziendaInformatica.it.	# Server Web
+6	IN	PTR	crono.AziendaInformatica.it.		# Exterior Router

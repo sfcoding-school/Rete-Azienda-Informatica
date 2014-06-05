@@ -9,7 +9,7 @@ $TTL 86400
  
 ; Definizione server DNS di mail
 IN NS eracle.servizi.AziendaInformatica.it  
-IN MX 10 ermes.DMZ.AziendaInformatica.it
+IN MX 10 ermes.AziendaInformatica.it
 
 ; Definizione host
 1 	IN	PTR	ares.calcolo.AziendaInformatica.it.		# Router

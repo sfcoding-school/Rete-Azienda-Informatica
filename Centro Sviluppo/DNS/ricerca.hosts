@@ -9,7 +9,7 @@ $TTL 86400
 
 ; Definizione server DNS e mail
 IN NS eracle.sviluppo AziendaInformatica.it  
-IN MX 10 ermes.DMZ.AziendaInformatica.it
+IN MX 10 ermes.AziendaInformatica.it
 
 ; Definizione host
 atena		IN	A	192.168.2.1	# Router
