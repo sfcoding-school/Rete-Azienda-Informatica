@@ -7,13 +7,11 @@ $TTL 86400
 	86400      		;Minimum
 }
 
-;Definizione server DNS e mail
-
+; Definizione server DNS e mail
 IN NS eracle.servizi.AziendaInformatica.it  
 IN MX 10 ermes.DMZ.AziendaInformatica.it
 
-;Definizione host
-
+; Definizione host
 tanato	IN	A	192.168.1.1	# Router
 afrodite	IN 	A	192.168.1.2	# Server DHCP
 host_1    	IN	A	192.168.1.3        # Host 1
