@@ -1,0 +1,21 @@
+###############
+# CENTRO SVILUPPO #
+###############
+
+# ROUTER APOLLO
+# Interfaccia sulla rete locale
+ifconfig eth0 192.168.3.1 netmask 255.255.255.0 broadcast 192.168.3.255
+# Interfaccia sulla rete dell'Amministrazione
+ifconfig eth1 192.168.31.1 netmask 255.255.255.0 broadcast 192.168.31.255
+# Interfaccia sulla rete del Centro Ricerca
+ifconfig eth2 192.168.32.1 netmask 255.255.255.0 broadcast 192.168.32.255
+# Interfaccia sulla rete del Centro Calcolo
+ifconfig eth3 192.168.33.1 netmask 255.255.255.0 broadcast 192.168.33.255
+
+# SERVER DNS ERACLE
+ifconfig eth0 192.168.3.2 netmask 255.255.255.0 broadcast 192.168.3.255
+
+# HOSTS
+ifconfig eth0 192.168.3.3 netmask 255.255.255.0 broadcast 192.168.3.255
+...
+ifconfig eth0 192.168.3.102 netmask 255.255.255.0 broadcast 192.168.3.255

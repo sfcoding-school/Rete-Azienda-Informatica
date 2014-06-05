@@ -1,0 +1,39 @@
+################
+# AMMINISTRAZIONE #
+###############
+
+# INTERIOR ROUTER TANATO
+# Interfaccia sulla rete locale
+ifconfig eth0 192.168.1.1 netmask 255.255.255.0 broadcast 192.168.1.255
+# Interfaccia sulla rete del Centro Ricerca
+ifconfig eth1 192.168.11.1 netmask 255.255.255.0 broadcast 192.168.11.255
+# Interfaccia sulla rete del Centro Sviluppo
+ifconfig eth2 192.168.12.1 netmask 255.255.255.0 broadcast 192.168.12.255
+# Interfaccia con IP pubblico sulla DMZ
+ifconfig eth3 146.220.6.1 netmask 255.255.255.0 broadcast 146.220.6.255
+
+# EXTERIOR ROUTER CRONO
+# Interfaccia con IP pubblico sulla DMZ
+ifconfig eth0 146.220.6.6 netmask 255.255.255.0 broadcast 146.220.6.255
+# Interfaccia con IP pubblico su Internet
+ifconfig eth1 146.220.6.7 netmask 255.255.255.0 broadcast 146.220.6.255
+
+# SERVER DHCP AFRODITE
+ifconfig eth0 192.168.1.2 netmask 255.255.255.0 broadcast 192.168.1.255
+
+# HOSTS
+ifconfig eth0 192.168.1.3 netmask 255.255.255.0 broadcast 192.168.1.255
+...
+ifconfig eth0 192.168.1.102 netmask 255.255.255.0 broadcast 192.168.1.255
+
+# SERVER MAIL DMZ ERMES
+ifconfig eth0 146.220.6.2 netmask 255.255.255.0 broadcast 146.220.6.255
+
+# SERVER DNS DMZ ZEUS
+ifconfig eth0 146.220.6.3 netmask 255.255.255.0 broadcast 146.220.6.255
+
+# SERVER PROXY DMZ ADE
+ifconfig eth0 146.220.6.4 netmask 255.255.255.0 broadcast 146.220.6.255
+
+# SERVER WEB DMZ POSEIDONE
+ifconfig eth0 146.220.6.5 netmask 255.255.255.0 broadcast 146.220.6.255

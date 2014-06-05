@@ -1,0 +1,19 @@
+###################
+# CENTRO MANUTENZIONE #
+###################
+
+# ROUTER DIONISO
+# Interfaccia sulla rete locale
+ifconfig eth0 192.168.5.1 netmask 255.255.255.0 broadcast 192.168.5.255
+# Interfaccia sulla rete del Centro Calcolo
+ifconfig eth1 192.168.51.1 netmask 255.255.255.0 broadcast 192.168.51.255
+
+# SERVER BACKUP URANO
+ifconfig eth0 192.168.5.3 netmask 255.255.255.0 broadcast 192.168.5.255
+# SERVER DHCP DEMETRA
+ifconfig eth0 192.168.5.3 netmask 255.255.255.0 broadcast 192.168.5.255
+
+# HOSTS
+ifconfig eth0 192.168.5.4 netmask 255.255.255.0 broadcast 192.168.5.255
+...
+ifconfig eth0 192.168.5.103 netmask 255.255.255.0 broadcast 192.168.5.255

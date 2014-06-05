@@ -1,0 +1,21 @@
+###############
+# CENTRO CALCOLO #
+###############
+
+# ROUTER ARES
+# Interfaccia sulla rete locale
+ifconfig eth0 192.168.4.1 netmask 255.255.255.0 broadcast 192.168.4.255
+# Interfaccia sulla rete del Centro Ricerca
+ifconfig eth1 192.168.41.1 netmask 255.255.255.0 broadcast 192.168.41.255
+# Interfaccia sulla rete del Centro Sviluppo
+ifconfig eth2 192.168.42.1 netmask 255.255.255.0 broadcast 192.168.42.255
+# Interfaccia sulla rete del Centro Manutenzione
+ifconfig eth3 192.168.43.1 netmask 255.255.255.0 broadcast 192.168.43.255
+
+# SERVER AZIENDALE EFESTO
+ifconfig eth0 192.168.4.2 netmask 255.255.255.0 broadcast 192.168.4.255
+
+# HOSTS
+ifconfig eth0 192.168.4.3 netmask 255.255.255.0 broadcast 192.168.4.255
+...
+ifconfig eth0 192.168.4.102 netmask 255.255.255.0 broadcast 192.168.4.255

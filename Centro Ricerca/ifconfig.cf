@@ -1,0 +1,18 @@
+##############
+# CENTRO RICERCA #
+##############
+
+# ROUTER ATENA
+# Interfaccia sulla rete locale
+ifconfig eth0 192.168.2.1 netmask 255.255.255.0 broadcast 192.168.2.255
+# Interfaccia sulla rete dell'Amministrazione
+ifconfig eth1 192.168.21.1 netmask 255.255.255.0 broadcast 192.168.21.255
+# Interfaccia sulla rete del Centro Sviluppo
+ifconfig eth2 192.168.22.1 netmask 255.255.255.0 broadcast 192.168.22.255
+# Interfaccia sulla rete del Centro Calcolo
+ifconfig eth3 192.168.23.1 netmask 255.255.255.0 broadcast 192.168.23.255
+
+# HOSTS
+ifconfig eth0 192.168.2.2 netmask 255.255.255.0 broadcast 192.168.2.255
+...
+ifconfig eth0 192.168.2.101 netmask 255.255.255.0 broadcast 192.168.2.255
