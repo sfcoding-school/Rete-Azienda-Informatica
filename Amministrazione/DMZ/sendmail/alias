@@ -1,0 +1,7 @@
+# Alias amministratori
+amministratore_azienda: admin@AziendaInformatica.it
+amministratore1: andrea.ceccarelli@AziendaInformatica.it
+amministratore2: jacopo.castellini@AziendaInformatica.it
+
+# Mailing list
+admin: admin@AziendaInformatica.it, andrea.ceccarelli@AziendaInformatica.it, jacopo.castellini@AziendaInformatica.it

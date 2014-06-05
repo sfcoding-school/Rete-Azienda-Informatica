@@ -1,0 +1,20 @@
+@	IN	SOA	zeus.DMZ.AziendaInformatica.it	admin.AziendaInformatica.it {
+	2014052002	;serial
+	36000               	;refresh every 100 hours
+	3600			;retry after 1 hour
+	3600000		;expire after 1000 hours
+	36000		;default ttl is 100 hours
+}
+
+;Definizione dei server DNS e mail
+
+IN    NS    zeus.AziendaInformatica.it
+IN    MX    mail.BrunelloCucinelli.it
+
+;Host in DMZ.AziendaInformatica.it
+
+1	IN	PTR	tanato.DMZ.AziendaInformatica.it.		# Interior Router
+2	IN	PTR	ermes.DMZ.AziendaInformatica.it.		# Server Mail
+4	IN	PTR	ade.DMZ.AziendaInformatica.it.		# Server Proxy
+5	IN	PTR	poseidone.DMZ.AziendaInformatica.it.	# Server Web
+6	IN	PTR	crono.DMZ.AziendaInformatica.it.		# Exterior Router

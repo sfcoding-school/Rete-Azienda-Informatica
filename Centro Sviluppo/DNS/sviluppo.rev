@@ -1,0 +1,20 @@
+$ttl 86400
+@    IN	SOA	eracle.sviluppo.AziendaInformatica.it	admin.AziendaInformatica.it {
+	2014051701	;Serial
+	86400      		;Refresh
+	3600       		;Retry
+	604800     		;Expire
+	86400      		;Minimum
+}
+ 
+;Definizione server DNS di mail
+
+IN NS eracle.AziendaInformatica.it  
+IN MX 10 ermes.AziendaInformatica.it
+
+;Definizione host
+
+1 	IN	PTR	apollo.sviluppo.AziendaInformatica.it.			# Interior Router
+3	IN	PTR	sviluppo_1.sviluppo.AziendaInformatica.it.			# Host 1
+...
+102 	IN 	PTR	sviluppo_100.sviluppo.AziendaInformatica.it. 		# Host 100
