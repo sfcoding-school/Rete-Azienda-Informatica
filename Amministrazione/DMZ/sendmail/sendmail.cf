@@ -8,77 +8,65 @@
 # file di configurazione del server mail - file di riferimento :
 /etc/sendmail.cf
 
-# configurazione base
+----------------------# Macro utente (definizione obbligatoria) #-------------------------
+Dwmail  # Hostname
+DDAziendaInformatica.it # Impostazione dominio
+Dj$w.$D # Nome del dominio ufficiale del sito
+De$j Sendmail $v ready at $ # Messaggio iniziale SMTP
+DlFrom $g $d # Formato della UNIX
+DnMAILER-DAEMON # Messaggio d'errore
+Do.:%\@!^=/ # Operatori validi indirizzi
+Dq$g$?x ($x)$. # Indirizzo del mittente
 
-
-----------------------# definizione delle MACRO dell'utente (importanti) #-------------------------
-Dwmail  #hostname
-DDAziendaInformatica.it #impostazione dominio
-Dj$w.$D #nome del dominio ufficiale del sito
-De$j Sendmail $v ready at $ # messaggio iniziale SMTP
-DlFrom $g $d # formato della unix
-DnMAILER-DAEMON # messaggi d'errore
-Do.:%\@!^=/ # operatori indirizzi
-Dq$g$?x ($x)$. #indirizzo del mittente
-
---------------------# definizione trusted users (utenti fidati che possono
-cambiare l'indirizzo del mittente usando il FLAG -f) STANDARD#--------------------
+--------------------# Trusted users (utenti fidati che possono cambiare l'indirizzo del mittente usando il FLAG -f)#--------------------
 Troot
 Tdaemon
 Tuucp
 
-----------------------------# priorità messaggi nelle code #----------------------------------
+----------------------------# Priorità messaggi nelle code #----------------------------------
 
 Pfirst-class=0
 Pspecial-delivery=100
 Pbulk=-60
 Pjunk=-100
 
-----------------------# formato delle intestazioni #----------------------
+----------------------# Formato delle intestazioni #----------------------
 
 
-H?P?Return-Path: <$g> # path del mailer
-HReceived: $?sfrom $s $.by $j ($v/$Z) #ricevuta da
-H?D?Resent-Date: $a # data di partenza
-H?D?Date: $a
-H?F?Resent-From: $?x$x <$g>$|$g$. # forward
-H?F?From : $?x$x $|$g$. # nome mittente
+H?P?Return-Path: <$g> # Path del mailer
+HReceived: $?sfrom $s $.by $j ($v/$Z) # Ricevuta da
+H?D?Resent-Date: $a # Data di partenza
+H?D?Date: $ A
+H?F?Resent-From: $?x$x <$g>$|$g$. # Forward
+H?F?From : $?x$x $|$g$. # Nome mittente
 
 
-H?x?Full-Name: $x # impostazione fullname
-HPosted-Date: $a # data di partenza
-H?l?Received-Date: $b # data
+H?x?Full-Name: $x # Impostazione fullname
+HPosted-Date: $a # Data di partenza
+H?l?Received-Date: $b # Data
 HSubject:
-H?M?Resent-Message-Id: <$t.$i@$j> # il ora attuale
-H?M?Message-Id: <$t.$i@$j> # ora in formato-id della
+H?M?Resent-Message-Id: <$t.$i@$j> # Ora attuale
+H?M?Message-Id: <$t.$i@$j> # Ora in formato-id della
 
 
-------------------------# DEFINIZIONE DELLE OPTIONS #--------------------
+------------------------# Definizione delle options #--------------------
 
-OA/etc/alias # definizione del file
-degli alias
-OErrorHeader=/etc/sendmail.oE # messaggi di errore di
-header/file
-OF0600 # permesso per i temporary
-file
-OHman=/usr/lib/sendmail.hf # help nel file di
-sendmail
-OQueueDirectory=/var/spool/mqueue # directory queue
-OTimeout.queuereturn=5d # tempo di coda
+OA/etc/alias # Definizione del file degli alias
+OErrorHeader=/etc/sendmail.oE # Messaggi di errore di header/file
+OF0600 # Permesso per i temporary file
+OHman=/usr/lib/sendmail.hf # Help nel file di sendmail
+OQueueDirectory=/var/spool/mqueue # Directory queue
+OTimeout.queuereturn=5d # Tempo di coda
 OTimeout.queuewarn=4h
 
-# file di stato
-OStatusFile=/var/tmp/sendmail.st
+OStatusFile=/var/tmp/sendmail.st # File di stato
 
-#hosts file
-OHostsFile=/etc/hosts
+OHostsFile=/etc/hosts # Hosts file
 
-# per ostacolare gli spammer
-# impediamo agli spammer di usare i comandi di sendmail "EXPN" e "VRFY" spesso sfruttati da questi
-O PrivacyOptions=authwarnings,noexpn,novrfy
+OPrivacyOptions=authwarnings,noexpn,novrfy # Impediamo agli spammer di usare i comandi di sendmail "EXPN" e "VRFY" spesso sfruttati da questi
 
 
----------------------# MAILER configurazione di base modificabile se serve #------------------
+---------------------# Configurazione del mailer #------------------
 
 Mlocal, P=/bin/mail, F=rlsDFMmn, S=10, R=20, A=mail -d $u
 Mprog, P=/bin/sh, F=lsDFMe, S=10, R=20, A=sh -c $u

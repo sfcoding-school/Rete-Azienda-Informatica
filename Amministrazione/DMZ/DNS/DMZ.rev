@@ -1,18 +1,17 @@
-@	IN	SOA	zeus.DMZ.AziendaInformatica.it	admin.AziendaInformatica.it {
-	2014052002	;serial
-	36000               	;refresh every 100 hours
-	3600			;retry after 1 hour
-	3600000		;expire after 1000 hours
-	36000		;default ttl is 100 hours
-}
+$TTL 86400
+@	IN	SOA	zeus.DMZ.AziendaInformatica.it	admin.AziendaInformatica.it (
+	2014052002	;Serial
+	36000               	;Refresh
+	3600			;Retry
+	3600000		;Expire
+	36000		;Minimum
+)
 
-;Definizione dei server DNS e mail
+; Definizione dei server DNS e mail
+IN    NS    zeus.DMZ.AziendaInformatica.it
+IN    MX    mail.DMZ.BrunelloCucinelli.it
 
-IN    NS    zeus.AziendaInformatica.it
-IN    MX    mail.BrunelloCucinelli.it
-
-;Host in DMZ.AziendaInformatica.it
-
+; Definizione host
 1	IN	PTR	tanato.DMZ.AziendaInformatica.it.		# Interior Router
 2	IN	PTR	ermes.DMZ.AziendaInformatica.it.		# Server Mail
 4	IN	PTR	ade.DMZ.AziendaInformatica.it.		# Server Proxy

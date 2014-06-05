@@ -1,4 +1,4 @@
-$ttl 86400
+$TTL 86400
 @	IN	SOA	eracle.sviluppo.AziendaInformatica.it	admin.AziendaInformatica.it {
 	2014051701 	;Serial
 	86400      		;Refresh
@@ -9,13 +9,13 @@ $ttl 86400
 
 ;Definizione server DNS e mail
 
-IN NS eracle.AziendaInformatica.it  
-IN MX 10 ermes.AziendaInformatica.it
+IN NS eracle.servizi.AziendaInformatica.it  
+IN MX 10 ermes.DMZ.AziendaInformatica.it
 
 ;Definizione host
 
-tanato			IN	A	192.168.1.1	# Interior Router
-afrodite			IN 	A	192.168.1.2	# Server DHCP
-amministrazione_1    	IN	A	192.168.1.3        # Host 1
+tanato	IN	A	192.168.1.1	# Router
+afrodite	IN 	A	192.168.1.2	# Server DHCP
+host_1    	IN	A	192.168.1.3        # Host 1
 ...
-amministrazione_100	IN	A	192.168.1.102	# Host 100
+host_100	IN	A	192.168.1.102	# Host 100

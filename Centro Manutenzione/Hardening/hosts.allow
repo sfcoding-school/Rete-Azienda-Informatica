@@ -1,4 +1,4 @@
-# Definisco le reti che possono accedere al server di Backup
+# Definisco le reti che possono accedere al Server di Backup
 sshd: 192.168.2.0/24, 192.168.3.0/24, 192.168.5.0/24
 nfsd: 192.168.2.0/24, 192.168.3.0/24, 192.168.5.0/24
 statd: 192.168.2.0/24, 192.168.3.0/24, 192.168.5.0/24

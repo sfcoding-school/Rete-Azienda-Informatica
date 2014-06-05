@@ -1,5 +1,5 @@
 $TTL 86400
-@           IN	SOA	      zeus.DMZ.AziendaInformatica.it	admin.AziendaInformatica.it (
+@	       IN	SOA	       zeus.DMZ.AziendaInformatica.it	admin.AziendaInformatica.it (
 	2014052002	;Serial
 	36000               	;Refresh
 	3600			;Retry
@@ -12,9 +12,8 @@ IN    NS    zeus.DMZ.AziendaInformatica.it
 IN    MX    mail.DMZ.BrunelloCucinelli.it
 
 ; Definizione host
+tanato	IN	 A		146.220.6.1	# Router
+crono		IN	 A		146.220.6.6	# Exterior Router
 poseidone	IN      A		146.220.6.5	# Server Web
-www		IN	CNAME	poseidone		# Definisco il nome www per il Server Web
 ermes	IN      A 		146.220.6.2	# Server Mail
-mail	 	IN	CNAME	ermes		# Definisco il nome smtp per il Server Mail
-
-
+ade		IN	 A		146.220.6.4	# Server Proxy

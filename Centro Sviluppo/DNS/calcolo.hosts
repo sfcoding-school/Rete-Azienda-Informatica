@@ -1,5 +1,5 @@
-$ttl 86400
-@	IN	SOA	eracle.sviluppo.AziendaInformatica.it	admin.AziendaInformatica.it {
+$TTL 86400
+@			IN	SOA	eracle.sviluppo.AziendaInformatica.it	admin.AziendaInformatica.it {
 	2014051701 	;Serial
 	86400      		;Refresh
 	3600       		;Retry
@@ -7,15 +7,13 @@ $ttl 86400
 	86400      		;Minimum
  }
 
-;Definizione server DNS e mail
- 
-IN NS eracle.AziendaInformatica.it  
-IN MX 10 ermes.AziendaInformatica.it
+; Definizione server DNS e mail
+IN NS eracle.servizi.AziendaInformatica.it  
+IN MX 10 ermes.DMZ.AziendaInformatica.it
 
-;Definizione host
-
-ares			IN	A	192.168.4.1	# Interior Router
+; Definizione host
+ares			IN	A	192.168.4.1	# Router
 efesto		IN 	A	192.168.4.2	# Server Aziendale
-calcolo_1    	IN	A	192.168.4.3        # Host 1
+host_1    		IN	A	192.168.4.3        # Host 1
 ...
-calcolo_100    	IN	A	192.168.4.102	# Host 100
+host_100    	IN	A	192.168.4.102	# Host 100
