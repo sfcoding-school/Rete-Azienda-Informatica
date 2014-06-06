@@ -9,7 +9,7 @@ $TTL 86400
 
 ; Definizione dei server DNS e mail
 IN    NS    zeus.AziendaInformatica.it
-IN    MX    mail.BrunelloCucinelli.it
+IN MX 10 ermes.AziendaInformatica.it
 
 ; Definizione host
 1	IN	PTR	tanato.AziendaInformatica.it.		# Interior Router
